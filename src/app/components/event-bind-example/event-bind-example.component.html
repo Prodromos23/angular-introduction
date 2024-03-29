@@ -1,16 +1,13 @@
 
 <h4>Event Bind Example</h4>
-
-<div class="d-flex flex-column gap-2 w25">
-  <div class="d-flex.gap-2.align-items-center">
-    <button class="btn btn-primary  btn-sm flex-grow-1" (click)="incrementTimes()">+</button>
+<div class="d-flex flex-column gap-2 w-25">
+  <div class="d-flex gap-2 align-items-center">
+    <button class="btn btn-primary btn-sm flex-grow-1" (click)="decrementTimes()">-</button>
     <span>{{times}}</span>
-    <button class="btn btn-primary  btn-sm flex-grow-1" (click)="decrementTimes()">-</button>
+    <button class="btn btn-primary btn-sm flex-grow-1" (click)="incrementTimes()">+</button>
   </div>
-  <button class="btn btn-primary btn-sm" (click)="resetTimes()">Reset</button>
-
+  <button class="btn btn-primary btn-sm flex-grow-1" (click)="resetTimes()">Reset</button>
 </div>
-
 <div class="mt-2 mb-2 d-flex flex-column gap-2 w-25">
   <input type="text" class="form-control" (input)="onUserInput($event)">
   @if (!userInput) {
