@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Person } from 'src/app/shared/interfaces/person';
+import { EPerson, Person } from 'src/app/shared/interfaces/person';
 
 @Component({
   selector: 'app-person-table',
@@ -16,7 +16,16 @@ export class PersonTableComponent {
   //   email: 'prodromos@aueb.gr'
   // }
 
-  @Input() person : Person | undefined;
+  @Input() person : Person | EPerson | undefined;
+
+  // differentiate the type of person
+  isPerson(){
+    return this.person && 'address' in this.person
+  }
+  // differentiate the type of EPerson
+  isEPerson(){
+    return this.person && 'education' in this.person
+  }
 
   // {
   //   givenName: 'Prodromos',
