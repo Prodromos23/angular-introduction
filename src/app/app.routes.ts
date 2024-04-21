@@ -10,6 +10,7 @@ import { TemplateDrivenFormExampleComponent } from './components/template-driven
 import { EpersonReactiveFormComponent } from './components/eperson-reactive-form/eperson-reactive-form.component';
 import { ReactiveFormExampleComponent } from './components/reactive-form-example/reactive-form-example.component';
 import { HttpClientExampleComponent } from './components/http-client-example/http-client-example.component';
+import { UserRegistrationComponent } from './components/user-registration/user-registration.component';
 
 export const routes: Routes = [
   {path:'component-input-example',component:ComponentInputExampleComponent},
@@ -20,6 +21,7 @@ export const routes: Routes = [
   {path:'template-driven-form-example',component:TemplateDrivenFormExampleComponent},
   { path: 'reactive-form-example', component: ReactiveFormExampleComponent },
   {path:'http-client-example',component:HttpClientExampleComponent},
+  {path:'user-registration-example',component:UserRegistrationComponent},
   // {path:'welcome',component:WelcomeComponent},
   {path:'',component:WelcomeComponent}
 
